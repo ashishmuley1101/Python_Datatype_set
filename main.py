@@ -1,18 +1,22 @@
 
-# Iterate Over a Set in Python
+# Python Set Operations
 
-# iterating set in python using for loop.
+# 1. Union of Two Sets
+# The union of two sets A and B include all the elements of set A and B.
 
-# vowels
-vowels = {'e', 'a', 'u', 'o', 'i'}
+# first set
+A = {1, 3, 5}
 
-for vow in vowels:
-    print(vow)
+# second set
+B = {0, 2, 4}
 
-# Output :
-# i
-# e
-# o
-# a
-# u
+# perform union operation using " | " symbol
+print('Union using |:', A | B)
+
+# perform union operation using union()
+print('Union using union():', A.union(B))
+
+# Output
+# Union using |: {0, 1, 2, 3, 4, 5}
+# Union using union(): {0, 1, 2, 3, 4, 5}
 
