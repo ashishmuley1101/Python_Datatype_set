@@ -1,32 +1,33 @@
 
-# Python set any() method.
+# Python set enumerate() method.
 
-# The any() function returns True if any element of an iterable is True. If not, it returns False.
-# The syntax of any() is: any(iterable)
+# The enumerate() method adds a counter to an iterable and returns it (the enumerate object).
+# You can convert enumerate objects to list and tuple using list() and tuple() method respectively
+# The syntax of enumerate() is: enumerate(iterable, start=0)
+# iterable - a sequence, an iterator, or objects that supports iteration
+# start (optional) - enumerate() starts counting from this number.
+# If start is omitted, 0 is taken as start.
 
+languages = {'Python', 'Java', 'JavaScript'}
 
+enumerate_lang = enumerate(languages)
 
-# False since both are False
-l = {0, False}
-print(any(l))
+# convert enumerate object to list
+print(list(enumerate_lang))
+# Output: [(0, 'Python'), (1, 'Java'), (2, 'JavaScript')]
 
-# 0 is False
-d = {0: 'False'}
-print(any(d))
+grocery = {'bread', 'milk', 'butter'}
+enumerateGrocery = enumerate(grocery)
 
-# 1 is True
-d = {0: 'False', 1: 'True'}
-print(any(d))
+print(type(enumerateGrocery))
 
-# 0 and False are false
-d = {0: 'False', False: 0}
-print(any(d))
+# converting to list
+print(list(enumerateGrocery))
 
-# iterable is empty
-d = {}
-print(any(d))
-
-# 0 is False
-# '0' is True
-d = {'0': 'False'}
-print(any(d))
+# changing the default counter
+enumerateGrocery = enumerate(grocery, 10)  # start with 10
+print(list(enumerateGrocery))
+# Output
+# <class 'enumerate'>
+# [(0, 'bread'), (1, 'milk'), (2, 'butter')]
+# [(10, 'bread'), (11, 'milk'), (12, 'butter')]
