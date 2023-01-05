@@ -1,48 +1,42 @@
 
-# Creating set datatype in python
+# Python Set add() method.
 
-# Sets by placing all the elements inside curly braces {}, separated by comma.
+# Sets are mutable. However, since they are unordered, indexing has no meaning.
+# We cannot access or change an element of a set using indexing or slicing.
+# Set data type does not support it.
 
-# create a set of integer type
-student_id = {112, 114, 116, 118, 115}
-print('Student ID:', student_id)
+# The syntax of add() method is: set.add(elem)
 
-# create a set of string type
-vowel_letters = {'a', 'e', 'i', 'o', 'u'}
-print('Vowel Letters:', vowel_letters)
+numbers = {21, 34, 54, 12}
 
-# create a set of mixed data types
-mixed_set = {'Hello', 101, -2, 'Bye'}
-print('Set of mixed data types:', mixed_set)
+print('Initial Set:', numbers)
 
-# Output :
-# Student ID: {112, 114, 115, 116, 118}
-# Vowel Letters: {'i', 'u', 'e', 'o', 'a'}
-# Set of mixed data types: {'Hello', 'Bye', 101, -2}
+# using add() method
+numbers.add(32)
 
-# --------Create an Empty Set in Python----------------
+print('Updated Set:', numbers)
+# Output
+# Initial Set: {34, 12, 21, 54}
+# Updated Set: {32, 34, 12, 21, 54}
 
-# create an empty set
-empty_set = set()
+# -------Adding  tuple to a set--------------
 
-# create an empty dictionary
-empty_dictionary = { }
+# set of vowels
+vowels = {'a', 'e', 'u'}
 
-# check data type of empty_set
-print('Data type of empty_set:', type(empty_set))
-# O/p : Data type of empty_set: <class 'set'>
+# a tuple ('i', 'o')
+tup = ('i', 'o')
 
-# check data type of dictionary_set
-print('Data type of empty_dictionary', type(empty_dictionary))
-# Data type of empty_dictionary <class 'dict'>
+# adding tuple
+vowels.add(tup)
 
-set1 = set(range(1, 6))  # Create set using range
-print(set1)   # O/p : {1, 2, 3, 4, 5}
+print('Vowels are:', vowels)
 
+# adding same tuple again
+vowels.add(tup)
 
-# ----Duplicate Items in a Set------------------------------
-#  no duplicate items in the set as a set cannot contain duplicates.
+print('Vowels are:', vowels)
 
-numbers = {2, 4, 6, 6, 2, 8}
-print(numbers)   # O/p :  {8, 2, 4, 6}
-
+# Output
+# Vowels are: {('i', 'o'), 'e', 'u', 'a'}
+# Vowels are: {('i', 'o'), 'e', 'u', 'a'}
