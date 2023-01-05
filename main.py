@@ -1,30 +1,14 @@
 
-# Python Set len() method.
+# Python set max() method.
 
-# The syntax of len() is: len(s) where s is set
-# The len() function returns the number of items (length) in an object..
+# The max() function returns the largest item in an iterable. It can also be used to
+# find the largest item between two or more parameters.
 
-testSet = {1, 2, 3}
-print(testSet, 'length is', len(testSet))
 
-# Empty Set
-testSet = set()
-print(testSet, 'length is', len(testSet))
+number = {3, 2, 8, 5, 10, 6}
+largest_number = max(number);
 
-testDict = {1: 'one', 2: 'two'}
-print(testDict, 'length is', len(testDict))
+print("The largest number is:", largest_number)
 
-testDict = {}
-print(testDict, 'length is', len(testDict))
-
-testSet = {1, 2}
-# frozenSet
-frozenTestSet = frozenset(testSet)
-print(frozenTestSet, 'length is', len(frozenTestSet))
-
-# Output
-# {1, 2, 3} length is 3
-# set() length is 0
-# {1: 'one', 2: 'two'} length is 2
-# {} length is 0
-# frozenset({1, 2}) length is 2
+# Output :
+# The largest number is: 10
