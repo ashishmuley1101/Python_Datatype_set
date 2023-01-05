@@ -1,23 +1,19 @@
 
 # Python Set Operations
 
-# 4. Python Set symmetric_difference()
-# The symmetric_difference() method returns all the items present in given sets,
-# except the items in their intersections
-# The syntax of the symmetric_difference() method is: A.symmetric_difference(B) or A ^ B
+# 5. Python Set == operator
+# The == operator to check whether two sets are equal or not.
 
 # first set
-A = {2, 3, 5}
+A = {1, 3, 5}
 
 # second set
-B = {1, 2, 6}
+B = {3, 5, 1}
 
-# perform difference operation using " ^ "
-print('using ^ :', A ^ B)
+# perform difference operation using &
+if A == B:
+    print('Set A and Set B are equal')
+else:
+    print('Set A and Set B are not equal')
 
-# using symmetric_difference()
-print('using symmetric_difference():', A.symmetric_difference(B))
-
-# Output :
-# using ^ : {1, 3, 5, 6}
-# using symmetric_difference(): {1, 3, 5, 6}}
+#  O/p : Set A and Set B are equal
