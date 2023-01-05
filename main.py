@@ -1,18 +1,30 @@
 
-# Python Set discard() method.
+# Python Set len() method.
 
-# The syntax of discard() method is: a.discard(x)
-# Here, a is the set and x is the item to discard.
+# The syntax of len() is: len(s) where s is set
+# The len() function returns the number of items (length) in an object..
 
-numbers = {2, 3, 4, 5}
+testSet = {1, 2, 3}
+print(testSet, 'length is', len(testSet))
 
-# discards 3 from the set
-numbers.discard(3)
+# Empty Set
+testSet = set()
+print(testSet, 'length is', len(testSet))
 
-print('Set after discard:', numbers)
-# Output : Set after discard: {2, 4, 5}
+testDict = {1: 'one', 2: 'two'}
+print(testDict, 'length is', len(testDict))
 
-numbers.discard(10)
+testDict = {}
+print(testDict, 'length is', len(testDict))
 
-print('Set after discard:', numbers)
-# Output : Set after discard: {2, 4, 5}
+testSet = {1, 2}
+# frozenSet
+frozenTestSet = frozenset(testSet)
+print(frozenTestSet, 'length is', len(frozenTestSet))
+
+# Output
+# {1, 2, 3} length is 3
+# set() length is 0
+# {1: 'one', 2: 'two'} length is 2
+# {} length is 0
+# frozenset({1, 2}) length is 2
