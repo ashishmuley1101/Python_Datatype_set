@@ -1,14 +1,14 @@
 
-# Python set max() method.
+# Python set min() method.
 
-# The max() function returns the largest item in an iterable. It can also be used to
-# find the largest item between two or more parameters.
+# The min() function returns the smallest item in an iterable. It can also be used to
+# find the smallest item between two or more parameters.
 
 
 number = {3, 2, 8, 5, 10, 6}
-largest_number = max(number);
+smallest = min(number);
 
-print("The largest number is:", largest_number)
+print("The smallest number is:", smallest)
 
 # Output :
-# The largest number is: 10
+# The smallest number is: 2
