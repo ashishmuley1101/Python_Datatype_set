@@ -1,9 +1,9 @@
 
 # Python Set Operations
 
-# 2. Python Set intersection()
-# The intersection() method returns a new set with elements that are common to all sets.
-# The syntax of intersection() in Python is: A.intersection(*other_sets)
+# 3. Python Set difference()
+# The difference() method computes the difference of two sets and returns items that are unique to the first set.
+# The syntax of the difference() method is: A.difference(B) or A - B
 
 # first set
 A = {1, 3, 5}
@@ -11,12 +11,12 @@ A = {1, 3, 5}
 # second set
 B = {1, 2, 3}
 
-# perform intersection operation using " & "
-print('Intersection using &:', A & B)
+# perform difference operation using " - "
+print('Difference using - :', A - B)
 
-# perform intersection operation using intersection()
-print('Intersection using intersection():', A.intersection(B))
+# perform difference operation using difference()
+print('Difference using difference():', A.difference(B))
 
 # Output :
-# Intersection using &: {1, 3}
-# Intersection using intersection(): {1, 3}
+# difference using - : {5}
+# difference using difference(): {5}
