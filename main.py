@@ -1,42 +1,54 @@
 
-# Python Set add() method.
+# Python Set update() method.
 
-# Sets are mutable. However, since they are unordered, indexing has no meaning.
-# We cannot access or change an element of a set using indexing or slicing.
-# Set data type does not support it.
+# The syntax of update() method is: A.update(B)
+# Here, A is a set and B can be any iterable like list, set, dictionary, string, etc.
 
-# The syntax of add() method is: set.add(elem)
+A = {'a', 'b'}
+B = {1, 2, 3}
 
-numbers = {21, 34, 54, 12}
+# updates A after the items of B is added to A
+A.update(B)
 
-print('Initial Set:', numbers)
+print(A)
+# Output: {1, 2, 3, 'b', 'a'}
 
-# using add() method
-numbers.add(32)
+c = {1, 3, 5}
+d = {2, 4, 6}
+e = {0}
 
-print('Updated Set:', numbers)
+print('Original A:', A)
+
+# adds items of B and C to A and updates A
+c.update(d, e)
+
+print('c after update()', c)
+# Output :
+# Original A: {1, 2, 'a', 3, 'b'}
+# c after update() {0, 1, 2, 3, 4, 5, 6}
+
+# -------------update() to add String and Dictionary to Set-----
+
+# string
+alphabet = 'odd'
+
+# sets
+number1 = {1, 3}
+number2 = {2, 4}
+
+# add elements of the string to the set
+number1.update(alphabet)
+
+print('Set and strings:', number1)
+
+# dictionary
+key_value = {'key': 1, 'lock' : 2}
+
+# add keys of dictionary to the set
+number2.update(key_value)
+
+print('Set and dictionary keys:', number2)
+
 # Output
-# Initial Set: {34, 12, 21, 54}
-# Updated Set: {32, 34, 12, 21, 54}
-
-# -------Adding  tuple to a set--------------
-
-# set of vowels
-vowels = {'a', 'e', 'u'}
-
-# a tuple ('i', 'o')
-tup = ('i', 'o')
-
-# adding tuple
-vowels.add(tup)
-
-print('Vowels are:', vowels)
-
-# adding same tuple again
-vowels.add(tup)
-
-print('Vowels are:', vowels)
-
-# Output
-# Vowels are: {('i', 'o'), 'e', 'u', 'a'}
-# Vowels are: {('i', 'o'), 'e', 'u', 'a'}
+# Set and strings: {1, 3, 'o', 'd'}
+# Set and dictionary keys: {'lock', 2, 4, 'key'}
