@@ -1,22 +1,23 @@
 
 # Python Set Operations
 
-# 3. Python Set difference()
-# The difference() method computes the difference of two sets and returns items that are unique to the first set.
-# The syntax of the difference() method is: A.difference(B) or A - B
+# 4. Python Set symmetric_difference()
+# The symmetric_difference() method returns all the items present in given sets,
+# except the items in their intersections
+# The syntax of the symmetric_difference() method is: A.symmetric_difference(B) or A ^ B
 
 # first set
-A = {1, 3, 5}
+A = {2, 3, 5}
 
 # second set
-B = {1, 2, 3}
+B = {1, 2, 6}
 
-# perform difference operation using " - "
-print('Difference using - :', A - B)
+# perform difference operation using " ^ "
+print('using ^ :', A ^ B)
 
-# perform difference operation using difference()
-print('Difference using difference():', A.difference(B))
+# using symmetric_difference()
+print('using symmetric_difference():', A.symmetric_difference(B))
 
 # Output :
-# difference using - : {5}
-# difference using difference(): {5}
+# using ^ : {1, 3, 5, 6}
+# using symmetric_difference(): {1, 3, 5, 6}}
